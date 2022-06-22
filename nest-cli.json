@@ -1,0 +1,22 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "plugins": ["@nestjs/swagger"],
+    "assets": [
+      { "include": "i18n/**/*", "watchAssets": true },
+      { "include": "mail/templates/**/*", "watchAssets": true },
+      { "include": "**/*.css", "watchAssets": true }
+    ]
+  },
+  "plugins": [
+    {
+      "name": "@nestjs/swagger",
+      "options": {
+        "dtoFileNameSuffix": [".dto.ts", ".entity.ts"],
+        "classValidatorShim": true,
+        "introspectComments": true
+      }
+    }
+  ]
+}
